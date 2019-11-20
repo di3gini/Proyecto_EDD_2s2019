@@ -94,7 +94,7 @@ public class Login extends javax.swing.JFrame {
             this.setVisible(false);
         }
         else{
-            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto", "Error: " + "Error de Validación", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto", "Error de Validación", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
