@@ -11,6 +11,7 @@ import javax.jws.WebParam;
 import estructuras.ListaFechas;
 import estructuras.LIstaClientes;
 import estructuras.ListaProductos;
+import estructuras.ListaUsuarios;
 
 /**
  *
@@ -119,5 +120,28 @@ public class servicios {
         ListaProductos ad = ListaProductos.getInstancia();
         boolean bandera = ad.buscar_categoria_nombre(nombre);
         return bandera;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "validarUsuario")
+    public boolean validarUsuario(@WebParam(name = "usuario") String usuario, @WebParam(name = "contrasena") String contrasena) {
+        //TODO write your implementation code here:
+        ListaUsuarios usr = ListaUsuarios.getInstancia();
+        return usr.validarUsuario(usuario, contrasena);
+        
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "insertarUsuario")
+    public String insertarUsuario(@WebParam(name = "usuario") String usuario, @WebParam(name = "pass") String pass, @WebParam(name = "sucursal") String sucursal) {
+        //TODO write your implementation code here:
+        ListaUsuarios usr = ListaUsuarios.getInstancia();
+        usr.insertarUsuario(usuario, pass, sucursal);
+        return "se inserto";
+        
     }
 }

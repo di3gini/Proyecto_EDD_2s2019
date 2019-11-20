@@ -19,6 +19,7 @@ public class ListaUsuarios {
     public static ListaUsuarios getInstancia(){
         if (instancia == null){
             instancia = new ListaUsuarios();
+            
         }
         return instancia;
     }
@@ -66,17 +67,25 @@ public class ListaUsuarios {
         return datos;
     }
     public boolean validarUsuario(String usuario, String pass){
-        
+        boolean flag = false;
         NodoUsuarios aux = siguiente;
         while (aux != null) {
-
-            if(aux.getUsuario() == usuario && aux.getPass() == pass){
-                return true;
+            System.out.println("Datos comparados: " + aux.getUsuario() + ", "+ aux.getPass());
+            System.out.println("Datos comparados: " + usuario + ", "+ pass);
+            if(aux.getUsuario().equals(usuario) && aux.getPass().equals(pass)){
+                flag = true;
+                System.out.println("valida");
+                break;
             }
+            else{
+                System.out.println("Nel pto :'v");
+            }
+            System.out.println("enctro a bucle");
             //System.out.println(datos);
             aux = aux.getSiguiente();
         }
-        return false;
+        
+        return flag;
         
     }
 

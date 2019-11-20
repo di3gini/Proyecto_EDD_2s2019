@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://servicio/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servicio/">
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="imprimir_categorias" type="tns:imprimir_categorias"/>
+
+<xs:element name="imprimir_categoriasResponse" type="tns:imprimir_categoriasResponse"/>
+
+<xs:element name="imprimir_cliente_fila" type="tns:imprimir_cliente_fila"/>
+
+<xs:element name="imprimir_cliente_filaResponse" type="tns:imprimir_cliente_filaResponse"/>
+
+<xs:element name="imprimir_cliente_filacolumna" type="tns:imprimir_cliente_filacolumna"/>
+
+<xs:element name="imprimir_cliente_filacolumnaResponse" type="tns:imprimir_cliente_filacolumnaResponse"/>
+
+<xs:element name="imprimir_fechas" type="tns:imprimir_fechas"/>
+
+<xs:element name="imprimir_fechasResponse" type="tns:imprimir_fechasResponse"/>
+
+<xs:element name="imprimir_producto_categoria" type="tns:imprimir_producto_categoria"/>
+
+<xs:element name="imprimir_producto_categoriaResponse" type="tns:imprimir_producto_categoriaResponse"/>
+
+<xs:element name="insertarUsuario" type="tns:insertarUsuario"/>
+
+<xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse"/>
+
+<xs:element name="insertar_categoria" type="tns:insertar_categoria"/>
+
+<xs:element name="insertar_categoriaResponse" type="tns:insertar_categoriaResponse"/>
+
+<xs:element name="insertar_fecha" type="tns:insertar_fecha"/>
+
+<xs:element name="insertar_fechaResponse" type="tns:insertar_fechaResponse"/>
+
+<xs:element name="insertar_productos" type="tns:insertar_productos"/>
+
+<xs:element name="insertar_productosResponse" type="tns:insertar_productosResponse"/>
+
+<xs:element name="insertar_venta_fecha" type="tns:insertar_venta_fecha"/>
+
+<xs:element name="insertar_venta_fechaResponse" type="tns:insertar_venta_fechaResponse"/>
+
+<xs:element name="validarUsuario" type="tns:validarUsuario"/>
+
+<xs:element name="validarUsuarioResponse" type="tns:validarUsuarioResponse"/>
+
+<xs:element name="verificar_categoria_codigo" type="tns:verificar_categoria_codigo"/>
+
+<xs:element name="verificar_categoria_codigoResponse" type="tns:verificar_categoria_codigoResponse"/>
+
+<xs:element name="verificar_categoria_nombre" type="tns:verificar_categoria_nombre"/>
+
+<xs:element name="verificar_categoria_nombreResponse" type="tns:verificar_categoria_nombreResponse"/>
+
+<xs:element name="verificar_fecha" type="tns:verificar_fecha"/>
+
+<xs:element name="verificar_fechaResponse" type="tns:verificar_fechaResponse"/>
+
+<xs:complexType name="insertar_productos">
+<xs:sequence>
+<xs:element name="codigo_producto" type="xs:int"/>
+<xs:element name="precio_compra" type="xs:int"/>
+<xs:element name="precio_venta" type="xs:int"/>
+<xs:element name="cantidad_producto" type="xs:int"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_productosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_fecha">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_fechaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verificar_categoria_nombre">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verificar_categoria_nombreResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_categoria">
+<xs:sequence>
+<xs:element name="nombre_categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_categoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verificar_fecha">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verificar_fechaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_cliente_filacolumna">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_cliente_filacolumnaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarUsuario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="sucursal" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_venta_fecha">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_venta_fechaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_fechas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="imprimir_fechasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validarUsuario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+<xs:element name="contrasena" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_categorias">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="imprimir_categoriasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_cliente_fila">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_cliente_filaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_producto_categoria">
+<xs:sequence>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_producto_categoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verificar_categoria_codigo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verificar_categoria_codigoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

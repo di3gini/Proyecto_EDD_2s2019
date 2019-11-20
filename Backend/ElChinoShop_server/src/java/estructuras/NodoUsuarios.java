@@ -37,7 +37,7 @@ public class NodoUsuarios {
     }
 
     public String getUsuario() {
-        return this.usuario;
+        return usuario;
     }
 
     public void setUsuario(String usuario) {
@@ -45,7 +45,7 @@ public class NodoUsuarios {
     }
 
     public String getPass() {
-        return this.pass;
+        return pass;
     }
 
     public void setPass(String pass) {
