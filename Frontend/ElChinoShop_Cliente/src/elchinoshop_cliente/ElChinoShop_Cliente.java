@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package elchinoshop_cliente;
-
+import Forms.*;
 /**
  *
  * @author di3go
